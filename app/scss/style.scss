@@ -4,6 +4,72 @@
 @import "global";
 
 
+.header {
+    position: fixed;
+    left: 0;
+    top: 30px;
+    right: 0;
+    z-index: 10;
+    &__inner{
+        display: flex;justify-content: space-between;
+        align-items: center;
+        min-height: 30px;
+        text-transform: uppercase;
+        font-size: 15px;
+        line-height: 17px;
+        @extend %ubuntu-medium;
+    }
+    &__btn {
+        color: #fff;
+        background-color: transparent;
+        padding: 6px 28px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        margin-right: 8px;
+        text-transform: uppercase;
+    }
+    &__phone{
+        font-size: 16px;
+        line-height: 18px;
+        @extend %ubuntu-bold;
+    }
+}
+
+.menu {
+    &__list-item {
+        display: inline-block;
+        & + .menu__list-item{
+            padding-left: 20px;
+        }
+    }
+}
+
+.top {
+    background-image: url('../images/top-bg.jpg');
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    &__title {
+        font-size: 96px;
+        line-height: 115px;
+        @extend %sf-semibold;
+        margin-bottom: 25px;
+    }
+    &__text{
+        margin: 25px 0 35px;
+        min-width: 325px;
+    }
+    &__social-item{
+        display: inline-block;
+        margin: 0 25px;
+    }
+}
+
+
+
 
 
 
