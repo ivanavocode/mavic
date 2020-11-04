@@ -40,13 +40,28 @@ body {
 }
 
 .page-section {
-    min-height: 100vh;
     background-image: url('../images/page-bg.jpg');
     background-repeat: no-repeat;
     background-position: top cetner;
     background-size: cover;
     position: relative;
-    padding: 74px 0 50px;
+    
+    &::before{
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        background: linear-gradient(107.54deg, rgba(23, 26, 28, 0.72) 0%, #5E5E57 100%);
+// mix-blend-mode: normal;
+opacity: 0.15;
+    }
+    &____wrapper {
+        padding: 74px 0 50px;    
+        z-index: 1;
+        position: relative;
+        min-height: 100vh;
+    }
 }
 
 .title {
@@ -55,6 +70,7 @@ body {
     line-height: 53px;
     padding-left: 25px;
     margin-bottom: 55px;
+    padding-top: 200px;
 
 }
 
