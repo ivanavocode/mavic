@@ -14,6 +14,8 @@ $(function(){
         autoScrolling: true,
         scrollHorizontally: true,
         sectionSelector: '.page-section',
+            anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+            menu: '#myMenu'
     })
 
 });
