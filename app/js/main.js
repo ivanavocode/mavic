@@ -14,8 +14,12 @@ $(function(){
         autoScrolling: true,
         scrollHorizontally: true,
         sectionSelector: '.page-section',
-            anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-            menu: '#myMenu'
-    })
+        scrollOverflow: true,
+        menu: '#header_nav',
+            anchors: ['top', 'products', 'benefits', 'specification', 'questions', 'contacts'],
+    });
 
+    $('.menu__btn').on('click', function(){
+        $('.menu__btn').toggleClass('menu__btn--active')
+    })
 });
