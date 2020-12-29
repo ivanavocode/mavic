@@ -14,14 +14,70 @@
     .top__text{
         margin: 15px 0 25px;
     }
+    .title{
+        padding-top: 90px;
+    }
+    .products__slider-box{
+        padding-top: 0;
+    }
+    .products__slider-text{
+        bottom: auto;
+        left: auto;
+        top: -105px;
+        right: 0;
+    }
 }
+
 @media (max-width: 1100px) {
     .menu{
         order: 1;
     }
     .menu__list{
-        display: none !important;
-        color: red;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow: auto;
+        background: rgba(1c1c1c, .9);
+        z-index: -1;
+        display: flex;
+        padding-top: 90px;
+        padding-left: 24px;
+        flex-direction: column;
+        justify-content: space-between;
+        transform: translateY(-100%);
+        transition: transform ;
+        &--active{
+            transform: translateY(0);
+        }
+    }
+    .menu__list-item+.menu__list-item{
+        padding-left: 0;
+    }
+    .menu__list-item  {
+        margin-bottom: 35px;
+    }
+    .menu__list-phone,
+    .menu__list--link{
+        display: block;
+    }
+    .menu__list-phone{
+        padding-top: 33px;
+        position: relative;
+        margin-bottom: auto;
+        margin-top: auto;  
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 18px;              
+        &::before{
+            content: '';
+            position: absolute;
+            border-top: 1px solid rgba(#fff, .24);
+            top: 0;
+            right: 0;
+            left: -24px;
+        }
     }
     .menu__btn {
         display: block;
@@ -53,11 +109,12 @@
         height: 2px;
         margin-bottom: 4px;
         opacity: 1;
-        transition: .3s;
+        transition: opacity .6s;
     }
     .menu__btn.menu__btn--active{
         .menu__btn-line  {
             opacity: 0;
+            transition: opacity 0;
         }
         &::after {
             width: 24px;
@@ -74,6 +131,24 @@
     .header__btn{
         margin-right: 0;
     }
+    .products__text{
+        padding-right: 15px;  
+    }
+    .products__slider-box{
+        padding-right: 20px;
+    }
+}
+@media (max-width: 1024px){
+    .title {
+        padding-top: 50px;
+        font-size: 35px;
+        line-height: 42px;
+        margin-bottom: 35px;
+    }
+    .products__slider-text{
+        font-size: 20px;
+        
+    }
 }
 
 @media (max-width: 540px){
@@ -85,5 +160,17 @@
     }
     .scroll__btn{
         padding: 13px 0;
+    }
+}
+
+@media (max-height: 375px){
+    .menu__list-phone{
+        padding: 15px 0;
+    }
+}
+
+@media (max-height: 340px){
+    .menu__list-item {
+        margin-bottom: 18px;
     }
 }
