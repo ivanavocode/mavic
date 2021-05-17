@@ -283,6 +283,14 @@
     .products__slider-box{
         padding-bottom: 80px;
     }
+    .contacts__inner{
+        flex-wrap: wrap;
+    }
+    .contacts__form{
+        width: 100%;
+        margin-right: 0;
+        order: 1;
+    }
 }
 
 @media (max-width: 877px){
@@ -325,6 +333,9 @@
     }
     .questions__item-text{
         padding: 0 15px 40px 30px;
+    }
+    .contacts__inner{
+        padding-left: 0;
     }
 }
 
@@ -393,9 +404,18 @@
         padding-right: 0;
     }
     .questions__item-title{
-        line-height: 22px;
-        font-size: 18px;
         padding: 15px 75px 15px 15px;
+    }
+    .contacts__form-input{
+        display: block;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 414px){
+    .contacts__social-list{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
     }
 }
 
